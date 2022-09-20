@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
+    // Variables del movimiento del personaje
+    public float jumpForce = 6f;
+  | Rigidbody2D rigidBody;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +19,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void Jump()
+    {
+
     }
 }
