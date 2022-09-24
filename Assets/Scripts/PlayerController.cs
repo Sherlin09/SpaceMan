@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     // Variables del movimiento del personaje
     public float jumpForce = 6f;
+    public float runningSpeed = 2f;
     Rigidbody2D rigidBody;
     Animator animator;
 
@@ -39,6 +40,13 @@ public class PlayerController : MonoBehaviour
 
 
         Debug.DrawRay(this.transform.position, Vector2.down*1.5f, Color.red);
+    }
+
+    void FixedUpdate(){
+        if(rigidBody.velocity.x < runningSpeed){
+            rigidBody.velocity = new Vector2(runningSpeed,
+                                            rigidBody.velocity.y);
+        }
     }
 
     void Jump()
