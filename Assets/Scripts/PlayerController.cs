@@ -59,9 +59,7 @@ public class PlayerController : MonoBehaviour
 
     bool IsTouchingTheGround(){
         if(Physics2D.Raycast(this.transform.position, Vector2.down, 1.5f, groundMask)){
-            //TODO: Programar logica de contacto con el suleo
-            //animator.enabled = true;
-            GameManager.sharedInstance.currentGameState = GameState.inGame;
+            
             return true;
         } else {
             //TODO: programar logica d econtacto
