@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
 
     void Awake(){
         if(sharedInstance == null){
-            sharedInstance =this;
+            sharedInstance = this;
         }
     }
 
@@ -30,7 +30,24 @@ public class LevelManager : MonoBehaviour
     }
 
     public void AddLevelBlock(){
-
+        int ramdomIdx = Random.Range(0, allTheLevelBlocks.Count);
+        LevelBlock block;
+        Vector3 spawnPosition = Vector3.zero;
+        if(currentLevelBlocks.Count == 0){
+            block = Instantiate(allTheLevelBlocks[0]);
+            spawnPosition = levelStartPosition.position;
+        }else{
+            block = Instantiate(allTheLevelBlocks[ramdomIdx]);
+            spawnPosition = currentLevelBlocks[currentLevelBlocks.Count-1].exitPoint.position;
+        }
+        block.transform.SetParent(this.transform, false);
+        Vector3 correction = new Vector3(
+            spawnPosition.x-block.startPoint.position.x,
+            spawnPosition.y-block.startPoint.position.y,
+            0
+        );
+        block.transform.position = correction;
+        currentLevelBlocks.Add(block);
     }
 
     public void RemoveLevelBlock(){
@@ -42,7 +59,7 @@ public class LevelManager : MonoBehaviour
     }
 
     public void GenerateInitialBlocks(){
-        for(int i = 0; i> 2; i++){
+        for(int i = 0; i > 4; i++){
             AddLevelBlock();
         }
     }
