@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         this.rigidBody.velocity = Vector2.zero;
     
         GameObject maincamera = GameObject.Find("Main Camera");
-        GetComponent<Camera>().GetComponent<CameraFollow>().ResetCameraPosition();
+        maincamera.GetComponent<CameraFollow>().ResetCameraPosition();
     }
 
     // Update is called once per frame
