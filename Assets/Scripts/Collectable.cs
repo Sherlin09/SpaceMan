@@ -44,6 +44,7 @@ public class Collectable : MonoBehaviour
 
         switch(this.type){
             case CollectableType.money:
+                GameManager.sharedInstance.CollectObject(this);
                 break;
 
             case CollectableType.healthPotion:

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameView : MonoBehaviour
 {
-    public Text coinsText, scoreText, maxScoreText;
+    public Text coinText, scoreText, maxScoreText;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +17,11 @@ public class GameView : MonoBehaviour
     void Update ()
     {
         if(GameManager.sharedInstance.currentGameState == GameState.inGame){
-            int coins = 0;
+            int coins = GameManager.sharedInstance.collectedObject;
             float score = 0;
             float maxScore = 0;
 
-            coinsText.text = coins.ToString();
+            coinText.text = coins.ToString();
             scoreText.text = "Score: " + score.ToString("f1");
             maxScoreText.text = "MaxScore: " + maxScore.ToString("f1");
         }
