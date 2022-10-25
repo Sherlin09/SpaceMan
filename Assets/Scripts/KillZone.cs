@@ -18,8 +18,7 @@ public class KillZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.tag == "Player"){
-            PlayerController controller = collision.GetComponent
-            <PlayerController>();
+            PlayerController controller = collision.GetComponent<PlayerController>();
             controller.Die();
         }
     }
