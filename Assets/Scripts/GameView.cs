@@ -14,7 +14,7 @@ public class GameView : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update ()
     {
         if(GameManager.sharedInstance.currentGameState == GameState.inGame){
             int coins = 0;
