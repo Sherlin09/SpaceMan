@@ -132,6 +132,9 @@ public class PlayerController : MonoBehaviour
         if(this.healthPoints >= MAX_HEALTH){
             this.healthPoints = MAX_HEALTH;
         }
+        if(this.healthPoints <= 0){
+            Die();
+        }
 
     }
 
