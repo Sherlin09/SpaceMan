@@ -15,13 +15,18 @@ public class PlayerController : MonoBehaviour
     const string STATE_ALIVE = "isAlive";
     const string STATE_ON_THE_GROUND = "isOnTheGround";
 
-    private int healthPotions, manaPoints;
+    [SerializeField]
+    private int healthPoints, manaPoints;
      public const int INITIAL_HEALTH = 100, INITIAL_MANA = 15,
         MAX_HEALTH = 200, MAX_MANA = 30,
         MIN_HEALTH = 10, MIN_MANA = 0;
 
     public LayerMask groundMask;
 
+    void Start()
+    {
+        startPosition = this.transform.position;
+    }
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -29,10 +34,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        startPosition = this.transform.position;
-    }
+    
 
     public void StartGame(){
         

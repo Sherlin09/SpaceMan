@@ -18,8 +18,12 @@ public class Collectable : MonoBehaviour
     bool hasBeenCollected = false;
 
     public int value = 1;
+    GameObject player;
     // Start is called before the first frame update
-    
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
     private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -48,9 +52,12 @@ public class Collectable : MonoBehaviour
                 break;
 
             case CollectableType.healthPotion:
+                player.GetComponent<PlayerController>().CollectHealth(this.value);
+                
                 break;
 
             case CollectableType.manaPotion:
+                player.GetComponent<PlayerController>().CollectMana(this.value);
                 break;
         }
     }
