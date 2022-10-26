@@ -1221,9 +1221,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 6
   runningSpeed: 2
-  healthPoints: 0
+  healthPoints: 100
   manaPoints: 0
-  jumpRaycastDistance: 1.5
+  jumpRaycastDistance: 1.9
   groundMask:
     serializedVersion: 2
     m_Bits: 256
@@ -3116,7 +3116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4195199085043523713, guid: 0d77c5526855f524d972ce0148181251, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 4195199085043523713, guid: 0d77c5526855f524d972ce0148181251, type: 3}
       propertyPath: m_LocalPosition.y

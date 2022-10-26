@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(STATE_ON_THE_GROUND, IsTouchingTheGround());
 
 
-        Debug.DrawRay(this.transform.position, Vector2.down*1.5f, Color.red);
+        Debug.DrawRay(this.transform.position, Vector2.down*jumpRaycastDistance,Color.red);
     }
 
     void FixedUpdate(){
@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
     }
 
     bool IsTouchingTheGround(){
-        if(Physics2D.Raycast(this.transform.position, Vector2.down, 1.5f, groundMask)){
+        if(Physics2D.Raycast(this.transform.position, Vector2.down, jumpRaycastDistance, groundMask)){
             
             return true;
         } else {
