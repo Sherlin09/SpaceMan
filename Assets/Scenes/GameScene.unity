@@ -1317,6 +1317,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuCanvas: {fileID: 1302393299}
+  gameCanvas: {fileID: 1183303136}
+  gameOverCanvas: {fileID: 1472656095}
 --- !u!1001 &615250407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1845,6 +1847,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007133555}
   m_CullTransparentMesh: 1
+--- !u!223 &1183303136 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8481148467645119116, guid: be7a3494ca595ae46b75584223c72d30, type: 3}
+  m_PrefabInstance: {fileID: 922987424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1265931183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2528,6 +2535,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allTheLevelBlocks:
   - {fileID: 2706432374181056092, guid: cdf14a81f35c92445b0610f8b91b8d57, type: 3}
+  - {fileID: 4422528598328261745, guid: e1fb66cd1c40aab419742a70ecca8345, type: 3}
+  - {fileID: 4422528598328261745, guid: e1fb66cd1c40aab419742a70ecca8345, type: 3}
+  - {fileID: 4422528598328261745, guid: e1fb66cd1c40aab419742a70ecca8345, type: 3}
+  - {fileID: 4422528598328261745, guid: e1fb66cd1c40aab419742a70ecca8345, type: 3}
+  - {fileID: 4422528598328261745, guid: e1fb66cd1c40aab419742a70ecca8345, type: 3}
+  - {fileID: 4422528598328261745, guid: e1fb66cd1c40aab419742a70ecca8345, type: 3}
+  - {fileID: 4422528598328261745, guid: e1fb66cd1c40aab419742a70ecca8345, type: 3}
+  - {fileID: 4422528598328261745, guid: e1fb66cd1c40aab419742a70ecca8345, type: 3}
   - {fileID: 4422528598328261745, guid: e1fb66cd1c40aab419742a70ecca8345, type: 3}
   currentLevelBlocks: []
   levelStartPosition: {fileID: 503066858}
