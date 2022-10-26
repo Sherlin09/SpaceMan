@@ -46,7 +46,20 @@ public class Enemy : MonoBehaviour {
 
     }
 
-   
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Coin"){
+            return;
+        }
+
+        if(collision.tag == "Player"){
+            collision.gameObject.GetComponent<PlayerController>().
+                     CollectHealth(-enemyDamage);
+            return;
+        }
+
+        facingRight = !facingRight;
+    }
 
 
 }
